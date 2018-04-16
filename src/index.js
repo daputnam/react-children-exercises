@@ -11,5 +11,23 @@ const ErrorBox = props => {
   )
 };
 
-ReactDOM.render(<ErrorBox>Watch Out</ErrorBox>, document.getElementById("root"));
+function NavItem(props) {
+  return (<a href={props.url}>{props.children}</a>);
+}
+
+function Nav({ children }) {
+  let items = React.Children.toArray(children);
+  for(let i = items.length - 1; i >= 1; i--) {
+    items.splice(i, 0,
+      <span key={i} className='separator'>|</span>
+); }
+  return (
+    <div>{items}</div>
+); }
+
+ReactDOM.render(<Nav>
+  <NavItem url='/'>Home</NavItem>
+  <NavItem url='/about'>About</NavItem>
+  <a href='/contact'>Contact</a>
+</Nav>, document.getElementById("root"));
 
