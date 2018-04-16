@@ -25,9 +25,17 @@ function Nav({ children }) {
     <div>{items}</div>
 ); }
 
-ReactDOM.render(<Nav>
-  <NavItem url='/'>Home</NavItem>
-  <NavItem url='/about'>About</NavItem>
-  <a href='/contact'>Contact</a>
-</Nav>, document.getElementById("root"));
+// ReactDOM.render(<Nav>
+//   <NavItem url='/'>Home</NavItem>
+//   <NavItem url='/about'>About</NavItem>
+//   <a href='/contact'>Contact</a>
+// </Nav>, document.getElementById("root"));
+function Dialog(props){
 
+}
+
+ReactDOM.render(<Dialog>
+  <Title>This is the title</Title>
+  <Body>body here</Body>
+  <Footer>Footer here</Footer>
+</Dialog>, document.getElementById("root"));
