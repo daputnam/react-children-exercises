@@ -16,3 +16,15 @@ body {
   align-items: center;
   /* justify-content: center; */
 }
+
+.dialog {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 300px;
+  margin: 50px;
+  padding: 10px;
+}
+hr {
+  border: .5px solid darkblue;
+  border-color:darkgrey;
+}

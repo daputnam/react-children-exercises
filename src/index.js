@@ -35,6 +35,7 @@ function Title({ children }){
   return (
     <h1>
       {children}
+      <hr/>
     </h1>
   )
 }
@@ -42,6 +43,7 @@ function Body({ children }){
   return (
     <h2>
       {children}
+      <hr/>
     </h2>
   )
 }
@@ -55,7 +57,7 @@ function Footer({ children }){
 function Dialog(props){
   let items = React.Children.toArray(props.children);
   return (
-    <div>
+    <div className="dialog">
       {items}
     </div>
   );
