@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import PropTypes from 'prop-types'
 import "./index.css";
 
 const ErrorBox = props => {
@@ -30,8 +31,37 @@ function Nav({ children }) {
 //   <NavItem url='/about'>About</NavItem>
 //   <a href='/contact'>Contact</a>
 // </Nav>, document.getElementById("root"));
+function Title({ children }){
+  return (
+    <h1>
+      {children}
+    </h1>
+  )
+}
+function Body({ children }){
+  return (
+    <h2>
+      {children}
+    </h2>
+  )
+}
+function Footer({ children }){
+  return (
+    <p>
+      {children}
+    </p>
+  )
+}
 function Dialog(props){
-
+  let items = React.Children.toArray(props.children);
+  return (
+    <div>
+      {items}
+    </div>
+  );
+}
+Dialog.propTypes = {
+  children: PropTypes.node
 }
 
 ReactDOM.render(<Dialog>
